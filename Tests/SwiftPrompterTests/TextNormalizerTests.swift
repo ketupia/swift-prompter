@@ -11,10 +11,20 @@ import Testing
     #expect(TextNormalizer.tokens(from: "oil\u{2014}change") == ["oil", "change"])
 }
 
-@Test func apostrophesAreRemovedNotSplit() {
-    #expect(TextNormalizer.tokens(from: "don't") == ["dont"])
-    #expect(TextNormalizer.tokens(from: "don\u{2019}t") == ["dont"])
+@Test func apostrophesInsideWordsAreKept() {
+    #expect(TextNormalizer.tokens(from: "Don't") == ["don't"])
+    #expect(TextNormalizer.tokens(from: "we'll go") == ["we'll", "go"])
+}
+
+@Test func apostrophesAtTheEdgesAreTrimmed() {
     #expect(TextNormalizer.tokens(from: "'quoted'") == ["quoted"])
+    #expect(TextNormalizer.tokens(from: "the dogs' bowls") == ["the", "dogs", "bowls"])
+    #expect(TextNormalizer.tokens(from: "rock 'n' roll") == ["rock", "n", "roll"])
+    #expect(TextNormalizer.tokens(from: "'' '") == [])
+}
+
+@Test func curlyApostrophesSeparateLikeOtherPunctuation() {
+    #expect(TextNormalizer.tokens(from: "don\u{2019}t") == ["don", "t"])
 }
 
 @Test func periodsSplit() {
