@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleIdentifier</key><string>com.ketupia.swiftprompter</string>
+    <key>CFBundleName</key><string>Swift Prompter</string>
+    <key>CFBundleDisplayName</key><string>Swift Prompter</string>
+    <key>CFBundleExecutable</key><string>SwiftPrompter</string>
+    <key>CFBundlePackageType</key><string>APPL</string>
+    <key>CFBundleShortVersionString</key><string>0.1.0</string>
+    <key>CFBundleVersion</key><string>1</string>
+    <key>LSMinimumSystemVersion</key><string>27.0</string>
+    <key>NSHighResolutionCapable</key><true/>
+    <key>NSMicrophoneUsageDescription</key><string>Swift Prompter uses your microphone to display live, on-device transcription while you present.</string>
+    <key>NSSpeechRecognitionUsageDescription</key><string>Swift Prompter transcribes your speech locally to display recognized words alongside your script.</string>
+</dict>
+</plist>

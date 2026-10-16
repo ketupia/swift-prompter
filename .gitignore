@@ -1,0 +1,7 @@
+.build/
+.swiftpm/
+dist/
+.DS_Store
+*.xcuserstate
+.claude/settings.local.json
+teleprompter-matching-handoff*.md
